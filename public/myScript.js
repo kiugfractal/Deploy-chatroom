@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var socket = io.connect('http://localhost:3000');
+	var socket = io.connect('http://vinter-1601.herokuapp.com');
 
 	//get date 
 	function getDates(){
