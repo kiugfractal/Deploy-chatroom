@@ -42,13 +42,18 @@ var express = require('express'),
     path = require('path');
 
 
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 app.configure(function(){
   //use this to load external lib for the client-side
   app.use(express.static(__dirname + '/public'));
 });
 
 
-server.listen(3000);
+server.listen(80);
 
 app.get('/',function(req,res){
   res.sendfile(__dirname + '/index.html');
