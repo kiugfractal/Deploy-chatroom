@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Testing io</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript" src='/socket.io/socket.io.js'></script>
+    <script type="text/javascript" src='myScript.js'></script>
+   
+  </head>
+<body>  
+        
+        
+
+        
+	    <div data-role='page' id='loginPage'>
+        <div data-role='header' data-position='fixed'>
+            <h1>Welcome to my chatroom</h1> 
+        </div>
+        <!-- Header -->
+        <div data-role='content'>
+            <div id='formLogin'>
+                <p>
+                    <label for='usertext'>Please enter your username: </label>
+                    <input type='text' id='usernameText'/>
+                </p>
+
+                <p>
+                    <a href='#chatPage' data-role='button' id='submitButton'>Submit</a>
+                </p>
+            </div>
+        </div>
+        <!-- Content -->
+    </div>
+    <!-- Login page -->
+
+    <div data-role='page' id='chatPage'>
+
+        <audio id='audioNoti' src="/resource/noti.mp3"  autobuffer></audio>
+
+        <div data-role='header' data-position='fixed'>
+            <h1>Let's chat</h1>
+        </div>
+        <!-- header -->
+
+        <div data-role='content'>
+            
+            <div class='listDiv'>
+                <ul id='message' data-role='listview'>
+
+                </ul>
+            </div>
+
+            <div>
+                <label for='messageText'>Your message</label>
+                <input type='text' id='messageText'/>
+                <button id='sendButton'>Send</button>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+</body>
+</html>
