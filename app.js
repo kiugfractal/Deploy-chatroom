@@ -52,8 +52,11 @@ app.configure(function(){
   app.use(express.static(__dirname + '/public'));
 });
 
+var port = process.env.PORT || 3000;
 
-server.listen(80);
+server.listen(port);
+
+
 
 app.get('/',function(req,res){
   res.sendfile(__dirname + '/index.html');
